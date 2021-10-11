@@ -31,6 +31,7 @@ public class Main {
             double number = Math.random();
             if (number < 0.5) {
                 count = count + 1;
+                numberOfHeads=0;
                 System.out.println("tails");
             } else {
                 numberOfHeads = numberOfHeads + 1;
