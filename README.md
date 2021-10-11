@@ -14,3 +14,16 @@ flipNHeads: Method that accepts an integer n and flips coins until n heads are f
 
 clock: Method that print out the current time to the console each second.
 
+### 2. basiclibrary
+
+#### methods contained within basiclibrary
+
+l Library:
+
+Rolling Dice: a method called roll that accepts an integer n and rolls a six-sided dice n times. The method should return an array containing the values of the rolls.
+
+containsDuplicates:a method called containsDuplicates that returns true or false depending on whether the array contains duplicate values.
+
+calculateAverage: a method that accepts an array of integers and calculates and returns the average of all the values in the array.
+
+getBackLowAvgArray:a method calculate the average value for each array in the main array and return the array with the lowest average.
