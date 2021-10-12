@@ -18,7 +18,7 @@ clock: Method that print out the current time to the console each second.
 
 #### methods contained within basiclibrary
 
-l Library:
+Library:
 
 Rolling Dice: a method called roll that accepts an integer n and rolls a six-sided dice n times. The method should return an array containing the values of the rolls.
 
@@ -27,3 +27,14 @@ containsDuplicates:a method called containsDuplicates that returns true or false
 calculateAverage: a method that accepts an array of integers and calculates and returns the average of all the values in the array.
 
 getBackLowAvgArray:a method calculate the average value for each array in the main array and return the array with the lowest average.
+
+analyzingWeatherData:
+Use the October Seattle weather data. Iterate through all of the data to find the min and max values. Use a HashSet of type Integer to keep track of all the unique temperatures seen. Finally, iterate from the min temp to the max temp and create a String containing any temperature not seen during the month. Return that String.
+
+Tally:a method that accepts a List of Strings representing votes and returns one string to show what got the most votes.
+
+### 3.JavaScript Linter
+
+#### methods contained within Linter
+
+linter:a method that reads a JavaScript file with a given Path, and generates an error message whenever it finds a line that doesn’t end in a semi-colon.
