@@ -5,13 +5,14 @@ package basiclibrary;
 
 import org.junit.Test;
 
+import java.util.ArrayList;
+
 import static basiclibrary.Library.*;
 import static org.junit.Assert.*;
 
 public class LibraryTest {
     @Test public void testRollMethod() {
-       Library classUnderTest=new Library();
-       int[] actualResult=classUnderTest.roll(4);
+        int[] actualResult=Library.roll(4);
         assertEquals(4,actualResult.length);
     }
     @Test public void testContainDuplicateMethod() {
@@ -36,6 +37,41 @@ public class LibraryTest {
         int[] actualResult=getBackLowAvgArray(testArr);
         int[] expectedResult={55, 54, 60, 53, 59, 57, 61};
         assertArrayEquals(expectedResult,actualResult);
+    }
+    @Test public void testAnalyzingWeatherDataMethod() {
+        int[][] inArr = {
+                {66, 64, 58, 65, 71, 57, 60},
+                {57, 65, 65, 70, 72, 65, 51},
+                {55, 54, 60, 53, 59, 57, 61},
+                {65, 56, 55, 52, 55, 62, 57}
+        };
+        ArrayList<String> testList = new ArrayList<>();
+        testList.add("minimum value: 51");
+        testList.add("maximum value: 72");
+        testList.add("Never saw temperature: 63");
+        testList.add("Never saw temperature: 67");
+        testList.add("Never saw temperature: 68");
+        testList.add("Never saw temperature: 69");
+
+        assertEquals( testList ,Library.analyzingWeatherData(inArr));
+    }
+
+
+    @Test public void testTallyMethod() {
+
+        ArrayList<String> testList = new ArrayList<>();
+        testList.add("Bush");
+        testList.add("Bush");
+        testList.add("Bush");
+        testList.add("Shrub");
+        testList.add("Hedge");
+        testList.add("Shrub");
+        testList.add("Bush");
+        testList.add("Hedge");
+        testList.add("Bush");
+        String expectedResult="Bush";
+        String actualResult=Library.tally(testList);
+        assertEquals(expectedResult,actualResult);
     }
 
 
