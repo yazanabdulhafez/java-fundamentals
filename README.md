@@ -72,3 +72,5 @@ linter:a method that reads a JavaScript file with a given Path, and generates an
     * returns the stars
   * `toString()`
     * returns the review as an organized string
+
+**you can test this code by running ./gradlew test.Also you can copy this code on intllij and run it.**
