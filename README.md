@@ -38,3 +38,39 @@ Tally:a method that accepts a List of Strings representing votes and returns one
 #### methods contained within Linter
 
 linter:a method that reads a JavaScript file with a given Path, and generates an error message whenever it finds a line that doesn’t end in a semi-colon.
+
+### 4.Inheritance and Interfaces
+
+#### Methods contained within this lab
+
+#### **Restaurant**
+
+* Methods:
+  * `getName()`
+    * returns the name of the restaurant
+  * `getNumOfStars()`
+    * returns the double value of the stars
+  * `getPriceCategory`
+    * returns the price category of the restaurant
+  * `addReview(String author, String body, int numOfStars)`
+    * adds a new review to the reviews ArrayList
+  * `setPriceCategory(int price)`
+    * return the price as string of $
+  * `setNumOfStars(int numOfStars)`
+    * set the average rating as reviews added
+  * `toString()`
+    * Returns a formated string for the restaurant
+
+#### **Review**
+
+* Methods:
+  * `getBody()`
+    * returns the body of the review
+  * `getAuthor()`
+    * returns the author
+  * `getNumOfStars()`
+    * returns the stars
+  * `toString()`
+    * returns the review as an organized string
+
+**you can test this code by running ./gradlew test.Also you can copy this code on intllij and run it.**
