@@ -23,8 +23,10 @@ class LibraryTest {
     @Test void restaurantWithReviewTest(){
         Restaurant testRestaurant=new Restaurant("amman");
         testRestaurant.setPriceCategory(2);
-        testRestaurant.addReview("yazan","not good restaurant",2);
-        testRestaurant.addReview("rami","better restaurant ever",4);
+        Review review=new Review("yazan","not good restaurant",2);
+        testRestaurant.addReview(review);
+        Review review1=new Review("rami","better restaurant ever",4);
+        testRestaurant.addReview(review1);
         String expectedOutput="[Restaurant name: amman Total Rating out of five: 3.0 priceCategory: $$ Review [[Author: yazan , Body: \"not good restaurant\", Rating out of 5: 2], [Author: rami , Body: \"better restaurant ever\", Rating out of 5: 4]]]";
         assertEquals(expectedOutput,testRestaurant.toString());
     }
@@ -34,5 +36,29 @@ class LibraryTest {
         assertEquals("yazan",testReview.getAuthor());
         assertEquals("best restaurant ever",testReview.getBody());
         assertEquals(5.0,testReview.getNumOfStars());
+    }
+
+    @Test void shopWithReviewTest(){
+        Shop newShop=new Shop("nike","good shop");
+        newShop.setPriceCategory(4);
+        Review review=new Review("yazan","not good shop",2);
+        newShop.addReview(review);
+        Review review1=new Review("rami","better shop ever",4);
+        newShop.addReview(review1);
+        String expectedOutput="[name: nike description: good shop price: $$$$ reviews: [[Author: yazan , Body: \"not good shop\", Rating out of 5: 2], [Author: rami , Body: \"better shop ever\", Rating out of 5: 4]]]";
+        assertEquals(expectedOutput,newShop.toString());
+    }
+
+    @Test void theaterWithReviewTest(){
+        Theater theater=new Theater("plazaMall");
+        theater.addMovie("titanic");
+        Review newReview=new Review("hana","good place",3);
+        theater.addMovieReview(newReview,"titanic");
+        Review newReview1=new Review("yazan","bad place",1);
+        theater.addMovie("matrix");
+        theater.addMovieReview(newReview1,"matrix");
+        System.out.println(theater);
+        String expectedOutput="[name: plazaMall stars: 2.0 movies: [titanic, matrix] reviews: [{Author: hana, body: good place, Rate: 3, Watched movie: titanic}, {Author: yazan, body: bad place, Rate: 1, Watched movie: matrix}]]";
+        assertEquals(expectedOutput,theater.toString());
     }
 }
