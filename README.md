@@ -43,21 +43,27 @@ linter:a method that reads a JavaScript file with a given Path, and generates an
 
 #### Methods contained within this lab
 
-#### **Restaurant**
+#### **Place**
 
 * Methods:
+
   * `getName()`
-    * returns the name of the restaurant
+    * returns the name
   * `getNumOfStars()`
     * returns the double value of the stars
   * `getPriceCategory`
-    * returns the price category of the restaurant
-  * `addReview(String author, String body, int numOfStars)`
+    * returns the price category
+  * `addReview(Review review)`
     * adds a new review to the reviews ArrayList
   * `setPriceCategory(int price)`
     * return the price as string of $
   * `setNumOfStars(int numOfStars)`
     * set the average rating as reviews added
+
+#### **Restaurant**
+
+* Methods:
+  
   * `toString()`
     * Returns a formated string for the restaurant
 
@@ -72,5 +78,27 @@ linter:a method that reads a JavaScript file with a given Path, and generates an
     * returns the stars
   * `toString()`
     * returns the review as an organized string
+
+#### **Shop**
+
+* Methods:
+  * `getDescription()`
+    * returns the description of the shop
+  * `toString()`
+    * returns the review of shop as an organized string
+
+#### **Theater**
+
+* Methods:
+  * `getMoviesList()`
+    * returns the movies in the moviesList
+  * `addMovie(String movieName)`
+    * Add movie to movieList
+  * `removeMovie(String movieName)`
+    * remove movie from movieList
+  * `addMovieReview(Review review,String movieName)`
+    * add review which contain movie
+  * `toString()`
+    * returns the review of theater as an organized string
 
 **you can test this code by running ./gradlew test.Also you can copy this code on intllij and run it.**

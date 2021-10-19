@@ -8,11 +8,14 @@ public class Review {
     public Review(String author, String body, int numOfStars) {
         this.author = author;
         this.body = body;
-        if (numOfStars >= 0 && numOfStars <= 5) {
+
+        if (numOfStars >= 0 && numOfStars <=5){
             this.numOfStars = numOfStars;
-        }else{
-            System.out.println("please enter rating between 0 and 5");
+        } else {
+            System.out.println("Please enter a number between 0 and 5");
+            this.numOfStars=-1;
         }
+
     }
 
     public String getAuthor() {
@@ -29,8 +32,15 @@ public class Review {
 
     }
 
-@Override
+
+
+    @Override
     public String toString() {
-        return "[Author: " + author + " , Body: \"" + body + "\", Rating out of 5: " + numOfStars + "]";
+
+            return "[Author: " + getAuthor()
+                    + " , Body: \"" + getBody()
+                    + "\", Rating out of 5: "
+                    + getNumOfStars() + "]";
+
     }
 }

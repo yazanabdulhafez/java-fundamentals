@@ -11,10 +11,28 @@ public static void main(String[] args){
     Restaurant restaurant=new Restaurant("amman");
     restaurant.setPriceCategory(2);
     System.out.println("price: "+restaurant.getPriceCategory());
-    restaurant.addReview("yazan","not good restaurant",2);
-    restaurant.addReview("rami","better restaurant ever",4);
-
+    Review review=new Review("yazan","hot dog",4);
+    System.out.println(review);
+    restaurant.addReview(review);
+    System.out.println("-----------------------------------------------------");
+    Review review2=new Review("rami","better restaurant ever",1);
+    System.out.println(review2);
+    System.out.println("-----------------------------------------------------");
+    restaurant.addReview(review2);
     System.out.println(restaurant);
-
+    System.out.println("-----------------------------------------------------");
+    Shop newShop=new Shop("nike","good shop");
+    newShop.setPriceCategory(4);
+    newShop.addReview(review);
+    System.out.println(newShop);
+    System.out.println("-----------------------------------------------------");
+    Theater theater=new Theater("amman");
+    theater.addMovie("titanic");
+    Review newReview=new Review("nike","good theater",3);
+    theater.addMovieReview(newReview,"titanic");
+    Review newReview1=new Review("yazan","good theater",1);
+    theater.addMovie("grid");
+    theater.addMovieReview(newReview1,"grid");
+    System.out.println(theater);
 }
 }
